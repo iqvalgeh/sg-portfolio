@@ -17,7 +17,7 @@ export default async function GameDetails({ params }) {
   const game = await getGame(slug);
 
   return (
-    <div className="container mx-auto px-12 py-10 max-w-7xl space-y-12 text-white">
+    <div className="container mx-auto px-12 py-10 max-w-7xl space-y-12 text-black">
       <h1 className="text-5xl font-extrabold text-center">{game.title}</h1>
 
       {/* Cover Image */}
@@ -70,9 +70,9 @@ export default async function GameDetails({ params }) {
       </div>
 
       {/* Content Section */}
-      <section className="space-y-6 max-w-6xl">
+      <section className="space-y-6 max-w-6xl text-black">
         <article
-          className="prose prose-invert prose-lg mx-auto w-full max-w-6xl"
+          className="prose prose-invert prose-lg mx-auto w-full max-w-6xl text-black"
           dangerouslySetInnerHTML={{ __html: game.content }}
         />
       </section>
@@ -113,19 +113,7 @@ export default async function GameDetails({ params }) {
         </ul>
       </section>
 
-      {/* Gameplay Video */}
-      <section className="space-y-4">
-        <h2 className="text-3xl font-semibold">Gameplay Video</h2>
-        <p>Check out the gameplay video on YouTube:</p>
-        <a
-          href={game.video}
-          className="block text-blue-400 hover:text-blue-200 hover:underline"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Watch Gameplay Video
-        </a>
-      </section>
+      
       <section className="space-y-4">
         <h2 className="text-3xl font-semibold">Support</h2>
         <a href="mailto:jerga99@gmail.com"

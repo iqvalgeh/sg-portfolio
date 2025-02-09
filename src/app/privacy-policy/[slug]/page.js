@@ -15,15 +15,15 @@ export default async function PrivacyPolicyDetails({ params }) {
   const policy = await getPolicy(slug);
 
   return (
-    <div className="container mx-auto px-12 py-10 max-w-7xl space-y-12 text-white">
+    <div className="container mx-auto px-12 py-10 max-w-7xl space-y-12 text-black">
       <p>Last Updated: {policy.date}</p>
       <h1 className="text-5xl font-extrabold text-center">{policy.title}</h1>
 
       {/* Content Section */}
-      <section className="space-y-6  max-w-6xl">
+      <section className="space-y-6  max-w-6xl text-black">
         {/* <h2 className="text-3xl font-semibold">Description</h2> */}
         <article
-          className="prose prose-invert prose-lg mx-auto w-full max-w-6xl"
+          className="prose prose-invert prose-lg mx-auto w-full max-w-6xl text-black"
           dangerouslySetInnerHTML={{ __html: policy.content }}
         />
       </section>
